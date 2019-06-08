@@ -15,18 +15,23 @@ class ViewController: UIViewController {
    
     
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var additionSwitch: UISwitch!
     @IBAction func ButtonTapped(_ sender: Any) {
-        buttonCount = buttonCount + 1
-        print (buttonCount)
-        if buttonCount >= 10 {
-            view.backgroundColor = UIColor.red
-            myLabel.text = "Gabriel is playing"
+        let addition = additionSwitch.isOn
+        if addition {
+            let sum = Int(topTextField.text!)! + Int(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+
+        } else {
+            let sum = Int(topTextField.text!)! - Int(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) - \(bottomTextField.text!) = \(sum)"
+
         }
-        if buttonCount >= 15 {
-            view.backgroundColor = UIColor.blue
-            myLabel.text = "Gabriel is playing"
-        }
-    }
+            }
     
     override func viewDidLoad() {
         super.viewDidLoad()

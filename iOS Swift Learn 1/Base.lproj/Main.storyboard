@@ -31,6 +31,27 @@
                                     <action selector="ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdU-7W-ZK5"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GB5-mq-2eZ">
+                                <rect key="frame" x="143" y="234" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1wy-R7-g01"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldh-ja-Fbs">
+                                <rect key="frame" x="163" y="149" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMM-8M-Mez">
+                                <rect key="frame" x="143" y="285" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BWO-90-igW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -38,11 +59,20 @@
                             <constraint firstItem="ezM-PV-PWR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="627-Jq-pUI"/>
                             <constraint firstItem="4Md-Ny-XHa" firstAttribute="top" secondItem="ezM-PV-PWR" secondAttribute="bottom" constant="10" id="Flg-fu-BqT"/>
                             <constraint firstItem="ezM-PV-PWR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H9i-bD-CU6"/>
+                            <constraint firstItem="GB5-mq-2eZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M8m-CQ-lK7"/>
+                            <constraint firstItem="WMM-8M-Mez" firstAttribute="top" secondItem="GB5-mq-2eZ" secondAttribute="bottom" constant="50" id="Mhk-RP-tb8"/>
+                            <constraint firstItem="WMM-8M-Mez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tw0-2i-guK"/>
+                            <constraint firstItem="Ldh-ja-Fbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sSf-zQ-txH"/>
+                            <constraint firstItem="GB5-mq-2eZ" firstAttribute="top" secondItem="Ldh-ja-Fbs" secondAttribute="bottom" constant="25" id="uBZ-kr-Cbp"/>
+                            <constraint firstItem="ezM-PV-PWR" firstAttribute="top" secondItem="WMM-8M-Mez" secondAttribute="bottom" constant="8" id="ywc-ch-833"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="Ldh-ja-Fbs" id="lZD-O3-sY5"/>
+                        <outlet property="bottomTextField" destination="WMM-8M-Mez" id="axd-q2-sHH"/>
                         <outlet property="myLabel" destination="ezM-PV-PWR" id="CVc-66-dVz"/>
+                        <outlet property="topTextField" destination="GB5-mq-2eZ" id="lTk-xB-Mfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
